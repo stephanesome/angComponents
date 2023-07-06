@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {AddressEntry} from './address-entry';
 import {NotificationService} from './notification.service';
 
@@ -8,13 +8,10 @@ import {NotificationService} from './notification.service';
   styleUrls: ['./address-list.component.css'],
   providers: [NotificationService]
 })
-export class AddressListComponent implements OnInit {
+export class AddressListComponent {
   addresses: AddressEntry[] = [];
   currentAddress: AddressEntry | null = null;
   constructor(private notificationService: NotificationService) { }
-
-  ngOnInit(): void {
-  }
 
   select(address: AddressEntry): void {
     this.currentAddress = address;
