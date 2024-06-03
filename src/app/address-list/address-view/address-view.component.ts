@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, input, OnInit, output} from '@angular/core';
 import {AddressEntry} from '../address-entry';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -11,8 +11,8 @@ import { FormsModule } from '@angular/forms';
     imports: [FormsModule, NgIf]
 })
 export class AddressViewComponent implements OnInit {
-  @Input() address!: AddressEntry;
-  @Output() fireDelete: EventEmitter<AddressEntry> = new EventEmitter();
+  address = input.required<AddressEntry>();
+  fireDelete = output<AddressEntry>();
   edit: boolean | undefined;
 
   ngOnInit(): void {
@@ -24,6 +24,6 @@ export class AddressViewComponent implements OnInit {
   }
 
   delete(): void {
-    this.fireDelete.emit(this.address);
+    this.fireDelete.emit(this.address());
   }
 }
