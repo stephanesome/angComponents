@@ -6,7 +6,6 @@ import {AddressEntry} from './address-entry';
 export class NotificationService {
   // Observable for selected elements
   selectedElement = new BehaviorSubject<AddressEntry | null>(null);
-  constructor() { }
 
   public selectionChanged(address: AddressEntry): void {
     this.selectedElement.next(address);

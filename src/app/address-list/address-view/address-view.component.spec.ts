@@ -8,8 +8,8 @@ describe('AddressViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddressViewComponent ]
-    })
+    imports: [AddressViewComponent]
+})
     .compileComponents();
   });
 

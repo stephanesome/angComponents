@@ -8,8 +8,8 @@ describe('AddressListElementComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddressListElementComponent ]
-    })
+    imports: [AddressListElementComponent]
+})
     .compileComponents();
   });
 
