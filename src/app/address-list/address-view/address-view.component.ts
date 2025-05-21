@@ -4,11 +4,11 @@ import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-    selector: 'app-address-view',
-    templateUrl: './address-view.component.html',
-    styleUrls: ['./address-view.component.css'],
-    standalone: true,
-    imports: [FormsModule, NgIf]
+  selector: 'app-address-view',
+  templateUrl: './address-view.component.html',
+  styleUrls: ['./address-view.component.css'],
+  standalone: true,
+  imports: [FormsModule, NgIf]
 })
 export class AddressViewComponent implements OnInit {
   @Input() address!: AddressEntry;

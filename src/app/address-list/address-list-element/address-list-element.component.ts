@@ -5,11 +5,11 @@ import {Subscription} from 'rxjs';
 import { NgClass } from '@angular/common';
 
 @Component({
-    selector: 'app-address-list-element',
-    templateUrl: './address-list-element.component.html',
-    styleUrls: ['./address-list-element.component.css'],
-    standalone: true,
-    imports: [NgClass]
+  selector: 'app-address-list-element',
+  templateUrl: './address-list-element.component.html',
+  styleUrls: ['./address-list-element.component.css'],
+  standalone: true,
+  imports: [NgClass]
 })
 export class AddressListElementComponent implements OnInit, OnDestroy {
   @Input()

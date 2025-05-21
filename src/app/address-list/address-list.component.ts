@@ -6,12 +6,12 @@ import { AddressListElementComponent } from './address-list-element/address-list
 import { NgIf, NgFor } from '@angular/common';
 
 @Component({
-    selector: 'app-address-list',
-    templateUrl: './address-list.component.html',
-    styleUrls: ['./address-list.component.css'],
-    providers: [NotificationService],
-    standalone: true,
-    imports: [NgIf, NgFor, AddressListElementComponent, AddressViewComponent]
+  selector: 'app-address-list',
+  templateUrl: './address-list.component.html',
+  styleUrls: ['./address-list.component.css'],
+  providers: [NotificationService],
+  standalone: true,
+  imports: [NgIf, NgFor, AddressListElementComponent, AddressViewComponent]
 })
 export class AddressListComponent {
   addresses: AddressEntry[] = [];
