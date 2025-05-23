@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, Output, OnInit} from '@angular/core';
 import {AddressEntry} from '../address-entry';
-import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,7 +7,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './address-view.component.html',
   styleUrls: ['./address-view.component.css'],
   standalone: true,
-  imports: [FormsModule, NgIf]
+  imports: [FormsModule]
 })
 export class AddressViewComponent implements OnInit {
   @Input() address!: AddressEntry;

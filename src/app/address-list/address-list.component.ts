@@ -3,7 +3,6 @@ import {AddressEntry} from './address-entry';
 import {NotificationService} from './notification.service';
 import { AddressViewComponent } from './address-view/address-view.component';
 import { AddressListElementComponent } from './address-list-element/address-list-element.component';
-import { NgIf, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-address-list',
@@ -11,7 +10,7 @@ import { NgIf, NgFor } from '@angular/common';
   styleUrls: ['./address-list.component.css'],
   providers: [NotificationService],
   standalone: true,
-  imports: [NgIf, NgFor, AddressListElementComponent, AddressViewComponent]
+  imports: [AddressListElementComponent, AddressViewComponent]
 })
 export class AddressListComponent {
   addresses: AddressEntry[] = [];
