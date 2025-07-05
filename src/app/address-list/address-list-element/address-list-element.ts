@@ -8,7 +8,6 @@ import { NgClass } from '@angular/common';
   selector: 'app-address-list-element',
   templateUrl: './address-list-element.html',
   styleUrls: ['./address-list-element.css'],
-  standalone: true,
   imports: [NgClass]
 })
 export class AddressListElement implements OnInit, OnDestroy {

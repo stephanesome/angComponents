@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-address-view',
   templateUrl: './address-view.html',
   styleUrls: ['./address-view.css'],
-  standalone: true,
   imports: [FormsModule]
 })
 export class AddressView implements OnInit {
