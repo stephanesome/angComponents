@@ -1,21 +1,20 @@
 import {Component, inject} from '@angular/core';
 import {AddressEntry} from './address-entry';
-import {NotificationService} from './notification.service';
-import { AddressViewComponent } from './address-view/address-view.component';
-import { AddressListElementComponent } from './address-list-element/address-list-element.component';
+import {Notification} from './notification';
+import { AddressView } from './address-view/address-view';
+import { AddressListElement } from './address-list-element/address-list-element';
 
 @Component({
   selector: 'app-address-list',
-  templateUrl: './address-list.component.html',
-  styleUrls: ['./address-list.component.css'],
-  providers: [NotificationService],
-  standalone: true,
-  imports: [AddressListElementComponent, AddressViewComponent]
+  templateUrl: './address-list.html',
+  styleUrls: ['./address-list.css'],
+  providers: [Notification],
+  imports: [AddressListElement, AddressView]
 })
-export class AddressListComponent {
+export class AddressList {
   addresses: AddressEntry[] = [];
   currentAddress: AddressEntry | null = null;
-  notificationService: NotificationService = inject(NotificationService);
+  notificationService: Notification = inject(Notification);
 
   select(address: AddressEntry): void {
     this.currentAddress = address;

@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-address-view',
-  templateUrl: './address-view.component.html',
-  styleUrls: ['./address-view.component.css'],
+  templateUrl: './address-view.html',
+  styleUrls: ['./address-view.css'],
   standalone: true,
   imports: [FormsModule]
 })
-export class AddressViewComponent implements OnInit {
+export class AddressView implements OnInit {
   @Input() address!: AddressEntry;
   @Output() fireDelete: EventEmitter<AddressEntry> = new EventEmitter();
   edit: boolean | undefined;

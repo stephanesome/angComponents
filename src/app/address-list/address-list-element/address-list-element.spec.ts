@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddressListElementComponent } from './address-list-element.component';
+import { AddressListElement } from './address-list-element';
 
 describe('AddressListElementComponent', () => {
-  let component: AddressListElementComponent;
-  let fixture: ComponentFixture<AddressListElementComponent>;
+  let component: AddressListElement;
+  let fixture: ComponentFixture<AddressListElement>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [AddressListElementComponent]
+    imports: [AddressListElement]
 })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddressListElementComponent);
+    fixture = TestBed.createComponent(AddressListElement);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
