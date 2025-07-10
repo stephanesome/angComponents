@@ -1,6 +1,6 @@
 import {Component, inject} from '@angular/core';
 import {AddressEntry} from './address-entry';
-import {Notification} from './notification';
+import {NotificationService} from './notification-service';
 import { AddressView } from './address-view/address-view';
 import { AddressListElement } from './address-list-element/address-list-element';
 
@@ -8,13 +8,13 @@ import { AddressListElement } from './address-list-element/address-list-element'
   selector: 'app-address-list',
   templateUrl: './address-list.html',
   styleUrls: ['./address-list.css'],
-  providers: [Notification],
+  providers: [NotificationService],
   imports: [AddressListElement, AddressView]
 })
 export class AddressList {
   addresses: AddressEntry[] = [];
   currentAddress: AddressEntry | null = null;
-  notificationService: Notification = inject(Notification);
+  notificationService: NotificationService = inject(NotificationService);
 
   select(address: AddressEntry): void {
     this.currentAddress = address;

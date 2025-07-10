@@ -1,6 +1,6 @@
 import {Component, inject, Input, OnDestroy, OnInit} from '@angular/core';
 import {AddressEntry} from '../address-entry';
-import {Notification} from '../notification';
+import {NotificationService} from '../notification-service';
 import {Subscription} from 'rxjs';
 import { NgClass } from '@angular/common';
 
@@ -15,7 +15,7 @@ export class AddressListElement implements OnInit, OnDestroy {
   address: AddressEntry | undefined;
   selected = false;
   subscription: Subscription | undefined;
-  notificationService= inject(Notification);
+  notificationService= inject(NotificationService);
 
   ngOnInit(): void {
     this.subscription = this.notificationService.selectedElement.subscribe(newAddress => {

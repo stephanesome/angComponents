@@ -3,7 +3,7 @@ import {BehaviorSubject} from 'rxjs';
 import {AddressEntry} from './address-entry';
 
 @Injectable()
-export class Notification {
+export class NotificationService {
   // Observable for selected elements
   selectedElement = new BehaviorSubject<AddressEntry | null>(null);
 
